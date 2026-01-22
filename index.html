@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>addict</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .player-container {
+            text-align: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin: 20px auto;
+        }
+        
+        #playButton {
+            background-color: #1db954;
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 18px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin: 10px 0;
+        }
+        
+        #playButton:hover {
+            background-color: #1ed760;
+        }
+
+        a {
+            color: #1db954;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        hr {
+            max-width: 600px;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="font-weight: bold; text-align: center;">ADDICT</h1>
+    
+    <div style="text-align: center;">
+        <a href="https://genius.com/artists/Jayya">Jayya</a>
+    </div>
+
+    <div class="player-container">
+        <audio id="myAudio" src="48_jayya_addict.ogg"></audio>
+        <button id="playButton">▶ Play</button>
+    </div>
+
+    <hr>
+
+    <pre style="text-align: center;font-size: 20px;">Don't apologize for what you did, I can't look past it
+Now you're trying to start an argument, you're so dramatic
+But I keep on coming back again, feel just like an addict
+And I know I say this often, but this time I swear I've had it</pre>
+    <br>
+    <pre style="text-align: center; font-size: 20px;">Leave me be swear it's alright
+I'm getting tired baby, lead me straight into the light
+See you conspire all the lies you keep on telling me
+I can see right through you
+Never thought that you would change, but I can't recognize the new you</pre>
+    <br>
+    <pre style="text-align: center; font-size: 20px;">Ah-ah, ah-ah, ah-ah</pre>
+    <pre style="text-align: center; font-size: 20px;">So when things don't go as planned, can you tell me in advance?
+You leave me out in the dark and then tell me to relax
+Your words mean more than a chance
+And I can't stop myself from thinking 'bout the things that we had
+Patience is all that I ask</pre>
+    <pre style="text-align: center; font-size: 20px;">Don't apologize for what you did, I can't look past it
+Now you're trying to start an argument, you're so dramatic
+But I keep on coming back again, feel just like an addict
+And I know I say this often, but this time I swear I've had it</pre>
+    <pre style="text-align: center; font-size: 20px;">Leave me be swear it's alright
+I'm getting tired baby, lead me straight into the light
+See you conspire all the lies you keep on telling me
+I can see right through you
+Never thought that you would change, but I can't recognize the n—</pre>
+    <pre style="text-align: center; font-size: 20px;">Ah-ah-ah-ah, ah-ah, ah-ah</pre>
+
+    <script>
+        const audio = document.getElementById('myAudio');
+        const playButton = document.getElementById('playButton');
+
+        playButton.addEventListener('click', function() {
+            if (audio.paused) {
+                audio.play();
+                playButton.textContent = '⏸ Pause';
+            } else {
+                audio.pause();
+                playButton.textContent = '▶ Play';
+            }
+        });
+    </script>
+</body>
+</html>
